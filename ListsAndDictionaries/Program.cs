@@ -144,25 +144,25 @@ namespace ListsAndDictionaries
             //the value will be the car make
             //print all elements to the console
 
-            Dictionary<string, string> carValet = new Dictionary<string, string>()
-            {
-                {"Smith","Ford" },
-                {"Jones", "Chevy"},
-                {"Attica", "Mazda" },
-                {"Li", "Toyota" },
-                {"Ng", "Mitsubishi" },
-                {"Bruce", "Buick" },
-                {"Brown","Ford" },
-                {"Tesla", "Tesla" },
-                {"Marley", "Chevy" },
-                {"McEwen", "Honda" }
+            //Dictionary<string, string> carValet = new Dictionary<string, string>()
+            //{
+            //    {"Smith","Ford" },
+            //    {"Jones", "Chevy"},
+            //    {"Attica", "Mazda" },
+            //    {"Li", "Toyota" },
+            //    {"Ng", "Mitsubishi" },
+            //    {"Bruce", "Buick" },
+            //    {"Brown","Ford" },
+            //    {"Tesla", "Tesla" },
+            //    {"Marley", "Chevy" },
+            //    {"McEwen", "Honda" }
 
-            }; //don't forget to put the semicolon here after defining the values
+            //}; //don't forget to put the semicolon here after defining the values
 
-            foreach (KeyValuePair<string, string> lastName in carValet)
-            {
-                Console.WriteLine(lastName);
-            }
+            //foreach (KeyValuePair<string, string> lastName in carValet)
+            //{
+            //    Console.WriteLine(lastName);
+            //}
 
             //EXAMPLE - Create a dictionary of 10 zoo animals
             //key = aniumal type
@@ -202,23 +202,48 @@ namespace ListsAndDictionaries
                 if (animalsAtZoo.ContainsKey(animal) == true)
                 {
                     Console.WriteLine("{0} already exists in the dictionary", animal);
-                    
+                    break;
                 }
+
                 else
                 {
                     Console.WriteLine("Would you like to add this animal?");
                     string addAnimal = Console.ReadLine();
+                    int numAnimal = 0;
                     if (addAnimal.ToLower() == "yes")
                     {
                         Console.WriteLine("How many {0} are there?", animal);
-                        int numAnimal = int.Parse(Console.ReadLine());
+                        numAnimal = int.Parse(Console.ReadLine());
                         animalsAtZoo.Add(animal, numAnimal);
                     }
-                }
                     
-                
-            }
+                }
 
+
+            }
+            //This is the example from Ric
+            //bool IsPrime = true;
+            //Console.WriteLine("Prime numbers: ");
+            //for (int i = 2; i <= 1000; i++)
+            //{
+            //    for (int j = 2; j < 1000; j++)
+            //    {
+            //        if (i != j && i % j == 0)
+            //        {
+            //            IsPrime = false;
+            //            break;
+            //        }
+            //    }
+            //    if (IsPrime)
+            //    {
+            //        Console.Write(i + " ");
+            //    }
+            //    IsPrime = true;
+
+
+
+
+            //}
             ///////////////////////////here thar be dragons/////////////////////
         }
     }
